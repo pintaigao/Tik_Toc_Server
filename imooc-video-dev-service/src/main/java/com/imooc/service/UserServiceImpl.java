@@ -5,9 +5,13 @@ import com.imooc.pojo.Users;
 
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import tk.mybatis.mapper.entity.Example;
+
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -36,5 +40,16 @@ public class UserServiceImpl implements UserService {
         user.setId(userId);
 
         usersMapper.insert(user);
+    }
+
+    @Override
+    public Users queryUserForLogin(String username, String password) {
+
+        Example userExample = new Example(Users.class);
+        Example.Criteria criteria = userExample.createCriteria();
+        criteria.andEqualTo("username",username);
+        criteria.andEqualTo("password",password);
+        Users result = usersMapper.selectOneByExample(userExample);
+        return result;
     }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="imooc-video-dev-service" />
+        <module name="imooc-videos-dev-common" />
+        <module name="imooc-videos-dev-pojo" />
+        <module name="imooc-videos-mapper" />
+        <module name="imooc-vidoes-dev-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="imooc-video-dev-service" target="1.8" />
+      <module name="imooc-videos-dev" target="1.8" />
+      <module name="imooc-videos-dev-common" target="1.8" />
+      <module name="imooc-videos-dev-pojo" target="1.8" />
+      <module name="imooc-videos-mapper" target="1.8" />
+      <module name="imooc-vidoes-dev-api" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

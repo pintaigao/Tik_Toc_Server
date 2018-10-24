@@ -13,4 +13,8 @@ public interface UserService {
 
     /*保存用户*/
     void saveUser(Users user);
+
+
+    /*用户登陆，根据用户名和密码查询用户*/
+    Users queryUserForLogin(String username, String md5Str);
 }
