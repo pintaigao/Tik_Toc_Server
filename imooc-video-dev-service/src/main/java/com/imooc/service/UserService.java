@@ -17,4 +17,11 @@ public interface UserService {
 
     /*用户登陆，根据用户名和密码查询用户*/
     Users queryUserForLogin(String username, String md5Str);
+
+
+    /* 用户修改信息 */
+    public void updateUserInfo(Users user);
+
+    /* 查询用户信息 */
+    public Users queryUserInfo(String userId);
 }
