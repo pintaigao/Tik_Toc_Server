@@ -1,7 +1,8 @@
-package com.imooc.service;
+package com.imooc.service.impl;
 
 import com.imooc.mapper.UsersMapper;
 import com.imooc.pojo.Users;
+import com.imooc.service.UserService;
 
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
