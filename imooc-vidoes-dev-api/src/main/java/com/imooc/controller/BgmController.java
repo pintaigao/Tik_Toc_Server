@@ -31,7 +31,7 @@ public class BgmController extends BasicController {
 
     @ApiOperation(value = "获取背景音乐列表", notes = "获取背景音乐列表的接口")
     @RequestMapping("/list")
-    public IMoocJSONResult Hello() {
+    public IMoocJSONResult list() {
         return IMoocJSONResult.ok(bgmService.queryBgmList());
     }
 

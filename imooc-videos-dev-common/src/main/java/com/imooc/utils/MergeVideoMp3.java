@@ -20,6 +20,7 @@ public class MergeVideoMp3 {
         System.out.println(ffmpegEXE);
         System.out.println(mp3InputPath);
         List<String> command = new ArrayList<>();
+        /* 这个暂时是没有用的*/
         command.add(ffmpegEXE);
         command.add("-i");
         command.add(videoInputPath);
