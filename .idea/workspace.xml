@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6079a8-42a4-4758-b889-a6397ef1e71a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-video-dev-service/src/main/java/com/imooc/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-videos-mapper/src/main/java/com.imooc.mapper/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-videos-mapper/src/main/java/com.imooc.mapper/UsersMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-videos-mapper/src/main/java/com.imooc.mapper/VideosMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-videos-mapper/src/main/java/com.imooc.mapper/VideosMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-videos-mapper/src/main/java/com.imooc.mapper/VideosMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-videos-mapper/src/main/java/com.imooc.mapper/VideosMapperCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/resources/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/resources/mapper/VideosMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/resources/mapper/VideosMapperCustom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ba6079a8-42a4-4758-b889-a6397ef1e71a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/imooc-video-dev-service/target/" />
     <ignored path="$PROJECT_DIR$/imooc-videos-dev-pojo/target/" />
     <ignored path="$PROJECT_DIR$/imooc-videos-dev-common/target/" />
@@ -81,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+            <state relative-caret-position="177">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -322,7 +308,7 @@
     <property name="SearchEverywhereHistoryKey" value="UserS&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-video-dev-service/src/main/java/com/imooc/service/UserService.java&#10;WebM&#9;PSI&#9;JAVA://com.imooc.WebMvcConfig&#10;User&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-video-dev-service/src/main/java/com/imooc/service/impl/UserServiceImpl.java&#10;UserSer&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-video-dev-service/src/main/java/com/imooc/service/UserService.java&#10;UserSee&#9;null&#9;null&#10;UserC&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/UserController.java&#10;Inter&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/interceptor/MiniInterceptor.java&#10;UserMa&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-videos-mapper/src/main/java/com.imooc.mapper/UsersMapper.java&#10;Vide&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/resources/mapper/VideosMapperCustom.xml&#10;VideoC&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/VideoController.java&#10;VideoSe&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-video-dev-service/src/main/java/com/imooc/service/VideoService.java&#10;Regi&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/RegistLoginController.java&#10;Web&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/WebMvcConfig.java&#10;Vmapper&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/resources/mapper/VideosMapperCustom.xml&#10;VideoVO&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-videos-dev-pojo/src/main/java/com/imooc/pojo/vo/VideosVO.java&#10;Basic&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/BasicController.java&#10;VideoCo&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/VideoController.java&#10;VideoSer&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-video-dev-service/src/main/java/com/imooc/service/VideoService.java&#10;VideosMapper&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/mybatis-generatorConfig/src/main/resources/mapper/VideosMapper.xml&#10;BgmS&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-video-dev-service/src/main/java/com/imooc/service/BgmService.java&#10;Vi&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/VideoController.java&#10;VO&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-videos-dev-pojo/src/main/java/com/imooc/pojo/vo/UsersVO.java&#10;Re&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/RegistLoginController.java&#10;basi&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/BasicController.java&#10;appli&#9;FILE&#9;file:///Users/hptg/Documents/Projects/Spring/imooc-videos/imooc-videos-dev/imooc-vidoes-dev-api/src/main/resources/application.properties&#10;Appl&#9;PSI&#9;JAVA://com.imooc.Application&#10;Serim&#9;PSI&#9;JAVA://com.imooc.service.UserServiceImpl" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540684985083" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540685320380" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -474,18 +460,18 @@
       <workItem from="1540379093855" duration="649000" />
       <workItem from="1540380416073" duration="22891000" />
       <workItem from="1540530197418" duration="12772000" />
-      <workItem from="1540578991160" duration="23641000" />
+      <workItem from="1540578991160" duration="23985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73137000" />
+    <option name="totallyTimeSpent" value="73481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20607029" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20607029" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -495,7 +481,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33782384" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33782384" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39792746" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -937,8 +923,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imooc-vidoes-dev-api/src/main/java/com/imooc/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+        <state relative-caret-position="177">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
