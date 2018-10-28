@@ -12,5 +12,11 @@ public interface VideosMapperCustom extends MyMapper<Videos> {
 
     public List<VideosVO> queryAllVideos(@Param("videoDesc") String videoDesc);
 
+    /* 对视频喜欢的数量进行累加 */
+    void addVideoLikeCount(String videoId);
+
+    /* 对视频喜欢的数量进行累减 */
+    void reduceVideoLikeCount(String videoId);
+
 
 }

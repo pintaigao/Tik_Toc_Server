@@ -22,4 +22,8 @@ public interface VideoService {
 
     /* 获取热搜词列表 */
     public List<String> getHotwords();
+
+    public void userLikeVideo(String userId, String videoId, String videoCreaterId);
+
+    public void userUnLikeVideo(String userId, String videoId, String videoCreaterId);
 }

@@ -1,6 +1,7 @@
 package com.imooc.controller;
 
 import com.imooc.pojo.Users;
+import com.imooc.pojo.vo.PublisherVideo;
 import com.imooc.pojo.vo.UsersVO;
 import com.imooc.service.UserService;
 import com.imooc.utils.IMoocJSONResult;
@@ -40,7 +41,7 @@ public class UserController extends BasicController {
     @PostMapping("/uploadFace")
     public IMoocJSONResult uploadFace(String userId, @RequestParam("file") MultipartFile[] files) throws Exception {
 
-        if(StringUtils.isBlank(userId)){
+        if (StringUtils.isBlank(userId)) {
             return IMoocJSONResult.errorMsg("用户id不能为空");
         }
 
@@ -78,7 +79,7 @@ public class UserController extends BasicController {
 
 
                 }
-            }else{
+            } else {
                 return IMoocJSONResult.errorMsg("上传出错");
             }
         } catch (Exception e) {
@@ -103,13 +104,59 @@ public class UserController extends BasicController {
     @ApiImplicitParam(name = "userId", value = "用户id", required = true, dataType = "String", paramType = "query")
     @PostMapping("/queryLoginUser")
     public IMoocJSONResult queryLoginUser(String userId) throws Exception {
-        if(StringUtils.isBlank(userId)){
+        if (StringUtils.isBlank(userId)) {
             return IMoocJSONResult.errorMsg("用户ID不能为空");
         }
         Users userInfo = userService.queryUserInfo(userId);
-        System.out.println(userInfo.getUsername());
         UsersVO usersVO = new UsersVO();
-        BeanUtils.copyProperties(userInfo,usersVO);
-        return  IMoocJSONResult.ok(usersVO);
+        BeanUtils.copyProperties(userInfo, usersVO);
+        return IMoocJSONResult.ok(usersVO);
     }
+
+
+    @ApiOperation(value = "查询用户信息", notes = "用户上传头像的接口")
+    @ApiImplicitParam(name = "userId", value = "用户id", required = true, dataType = "String", paramType = "query")
+    @PostMapping("/queryPublisher")
+    public IMoocJSONResult queryPublisher(String loginUserId, String videoId, String publisherUserId) throws Exception {
+
+        System.out.println(publisherUserId);
+        if (StringUtils.isBlank(publisherUserId)) {
+            return IMoocJSONResult.errorMsg("");
+        }
+
+        /* 查询视频发布者的信息 */
+        Users userInfo = userService.queryUserInfo(publisherUserId);
+        UsersVO publisher = new UsersVO();
+        BeanUtils.copyProperties(userInfo, publisher);
+
+        /* 查询当前登陆者和视频的点赞关系*/
+        boolean userLikeVideo = userService.isUserLikeVideo(loginUserId, videoId);
+
+        PublisherVideo bean = new PublisherVideo();
+        bean.setPublisher(publisher);
+        bean.setUserLikeVideo(userLikeVideo);
+        System.out.println(bean.getPublisher());
+
+
+        return IMoocJSONResult.ok(bean);
+    }
+
+    @PostMapping("/beyourfans")
+    public IMoocJSONResult beyourfans(String userId, String fanId) throws Exception {
+        if (StringUtils.isBlank(userId)||StringUtils.isBlank(fanId)) {
+            return IMoocJSONResult.errorMsg("");
+        }
+        userService.saveUserFanRelation(userId,fanId);
+        return IMoocJSONResult.ok("关注成功");
+    }
+
+    @PostMapping("/dontbeyourfans")
+    public IMoocJSONResult dontbeyourfans(String userId, String fanId) throws Exception {
+        if (StringUtils.isBlank(userId)||StringUtils.isBlank(fanId)) {
+            return IMoocJSONResult.errorMsg("");
+        }
+        userService.deleteUserFanRelation(userId,fanId);
+        return IMoocJSONResult.ok("取消关注成功");
+    }
+
 }

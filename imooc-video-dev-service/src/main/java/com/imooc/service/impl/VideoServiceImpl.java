@@ -3,9 +3,12 @@ package com.imooc.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.imooc.mapper.SearchRecordsMapper;
+import com.imooc.mapper.UsersLikeVideosMapper;
+import com.imooc.mapper.UsersMapper;
 import com.imooc.mapper.VideosMapper;
 import com.imooc.mapper.VideosMapperCustom;
 import com.imooc.pojo.SearchRecords;
+import com.imooc.pojo.UsersLikeVideos;
 import com.imooc.pojo.Videos;
 import com.imooc.pojo.vo.VideosVO;
 import com.imooc.service.VideoService;
@@ -19,6 +22,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+import tk.mybatis.mapper.entity.Example;
+
 @Service
 public class VideoServiceImpl implements VideoService {
 
@@ -31,6 +36,12 @@ public class VideoServiceImpl implements VideoService {
 
     @Autowired
     private SearchRecordsMapper searchRecordsMapper;
+
+    @Autowired
+    private UsersLikeVideosMapper usersLikeVideosMapper;
+
+    @Autowired
+    private UsersMapper usersMapper;
 
     @Autowired
     private Sid sid;
@@ -89,10 +100,44 @@ public class VideoServiceImpl implements VideoService {
 
     }
 
-    @Transactional(propagation = Propagation.SUPPORTS)
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public List<String> getHotwords() {
         return searchRecordsMapper.getHotwords();
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public void userLikeVideo(String userId, String videoId, String videoCreaterId) {
+        String likeId = sid.nextShort();
+        UsersLikeVideos ulv= new UsersLikeVideos();
+        ulv.setId(likeId);
+        ulv.setUserId(userId);
+        ulv.setVideoId(videoId);
+        usersLikeVideosMapper.insert(ulv);
+
+        // 2.视频喜欢数量累加
+        videosMapperCustom.addVideoLikeCount(videoId);
+
+        // 3. 用户受喜欢视频数量的累加
+        usersMapper.addReceiveLikeCount(userId);
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void userUnLikeVideo(String userId, String videoId, String videoCreaterId) {
+        // 1.删除关系
+        Example example = new Example(UsersLikeVideos.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId",userId);
+        criteria.andEqualTo("videoId",userId);
+
+        usersLikeVideosMapper.deleteByExample(example);
+        // 2.视频喜欢数量累减
+        videosMapperCustom.reduceVideoLikeCount(videoId);
+        // 3. 用户受喜欢视频数量的累减
+        usersMapper.reduceReceiveLikeCount(userId);
+
     }
 
 }

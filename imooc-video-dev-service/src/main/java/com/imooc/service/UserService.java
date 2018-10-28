@@ -24,4 +24,13 @@ public interface UserService {
 
     /* 查询用户信息 */
     public Users queryUserInfo(String userId);
+
+    /* 查询用户是否喜欢点赞视频 */
+    public boolean isUserLikeVideo(String userId, String videoId);
+
+    /* 增加用户和粉丝的关系*/
+    public void saveUserFanRelation(String userID,String fanId);
+
+    /* 删除用户和粉丝的关系*/
+    public void deleteUserFanRelation(String userId, String fanId);
 }
