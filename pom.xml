@@ -25,5 +25,9 @@
         <version>1.5.18.RELEASE</version>
     </parent>
 
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
 
 </project>
