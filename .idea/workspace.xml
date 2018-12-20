@@ -3,31 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2603ef3f-f8b8-4ea9-b708-f1e2966507bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-generatorConfig/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/BgmMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/CommentsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/SearchRecordsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersFansMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersLikeVideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/UsersReportMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/src/main/resources/mapper/VideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/com/hptg/tik_toc/mybatis/utils/GeneratorDisplay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/com/hptg/tik_toc/utils/MyMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/BgmMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/CommentsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/SearchRecordsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/UsersFansMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/UsersLikeVideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/UsersMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/UsersReportMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-generatorConfig/target/classes/mapper/VideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,23 +23,24 @@
     <session id="675832963">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1106" />
+          <entry key="java" value="1108" />
           <entry key="properties" value="12" />
           <entry key="xml" value="183" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1106" />
+          <entry key="JAVA" value="1108" />
           <entry key="Properties" value="12" />
           <entry key="XML" value="183" />
         </counts>
@@ -90,12 +68,12 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+                <state relative-caret-position="486">
+                  <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -118,12 +96,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Swagger2.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="394">
-                  <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+                <state relative-caret-position="470">
+                  <caret line="46" column="40" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -174,8 +152,8 @@
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Application.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/Users.java" />
-        <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Swagger2.java" />
+        <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java" />
       </list>
     </option>
   </component>
@@ -209,8 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,6 +233,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,16 +307,19 @@
       <workItem from="1544825689640" duration="5347000" />
       <workItem from="1544834761284" duration="488000" />
       <workItem from="1544850192286" duration="8766000" />
+      <workItem from="1545015384823" duration="564000" />
+      <workItem from="1545278340878" duration="914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14601000" />
+    <option name="totallyTimeSpent" value="16079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="23" width="2560" height="999" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49944875" visible="true" weight="0.19023034" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49944875" visible="true" weight="0.19301033" />
       <window_info id="Structure" order="1" sideWeight="0.5005513" side_tool="true" weight="0.24973376" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -348,7 +329,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3296582" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3296582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -472,9 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-78">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,9 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,9 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,20 +578,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java">
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Swagger2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="470">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Swagger2.java">
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        <state relative-caret-position="486">
+          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

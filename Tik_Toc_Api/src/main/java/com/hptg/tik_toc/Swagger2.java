@@ -7,12 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import springfox.documentation.builders.ApiInfoBuilder;
+
 import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+
 import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
+
 import springfox.documentation.service.Parameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
@@ -28,22 +31,22 @@ public class Swagger2 {
     public Docket createRestApi() {
 
         // 为swagger添加header参数可供输入
-//        ParameterBuilder userTokenHeader = new ParameterBuilder();
-//        ParameterBuilder userIdHeader = new ParameterBuilder();
-//        List<Parameter> pars = new ArrayList<Parameter>();
-//        userTokenHeader.name("headerUserToken").description("userToken")
-//                .modelRef(new ModelRef("string")).parameterType("header")
-//                .required(false).build();
-//        userIdHeader.name("headerUserId").description("userId")
-//                .modelRef(new ModelRef("string")).parameterType("header")
-//                .required(false).build();
-//        pars.add(userTokenHeader.build());
-//        pars.add(userIdHeader.build());
+        ParameterBuilder userTokenHeader = new ParameterBuilder();
+        ParameterBuilder userIdHeader = new ParameterBuilder();
+        List<Parameter> pars = new ArrayList<Parameter>();
+        userTokenHeader.name("headerUserToken").description("userToken")
+                .modelRef(new ModelRef("string")).parameterType("header")
+                .required(false).build();
+        userIdHeader.name("headerUserId").description("userId")
+                .modelRef(new ModelRef("string")).parameterType("header")
+                .required(false).build();
+        pars.add(userTokenHeader.build());
+        pars.add(userIdHeader.build());
 
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
                 .apis(RequestHandlerSelectors.basePackage("com.hptg.tik_toc.controller"))
-                .paths(PathSelectors.any()).build();
-//                .globalOperationParameters(pars);
+                .paths(PathSelectors.any()).build()
+                .globalOperationParameters(pars);
     }
 
     /**
