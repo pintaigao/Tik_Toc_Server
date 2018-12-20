@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import tk.mybatis.mapper.entity.Example;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -23,9 +25,14 @@ public class UserServiceImpl implements UserService {
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public boolean queryUsernameIsExist(String username) {
-        Users user = new Users();
+        /*Users user = new Users();
         user.setUsername(username);
-        Users result = usersMapper.selectOne(user);
+        Users result = usersMapper.selectOne(user);*/
+        /* 使用Example的同等效果*/
+        Example userExample = new Example(Users.class);
+        Example.Criteria criteria = userExample.createCriteria();
+        criteria.andEqualTo("username",username);
+        Users result = usersMapper.selectOneByExample(userExample);
         return result != null;
     }
 
@@ -37,9 +44,17 @@ public class UserServiceImpl implements UserService {
         usersMapper.insert(user);
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public Users queryUserForLogin(String username, String password) {
-        return null;
+
+        /* 创建Example（然后才能创建criteria）的作用是：才能根据一个条件去做一个匹配*/
+        Example userExample = new Example(Users.class);
+        Example.Criteria criteria = userExample.createCriteria();
+        criteria.andEqualTo("username",username);
+        criteria.andEqualTo("password",password);
+        Users result = usersMapper.selectOneByExample(userExample);
+        return result;
     }
 
     @Override
