@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Tik_Toc.iml" filepath="$PROJECT_DIR$/Tik_Toc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tik_Toc_Api/Tik_Toc_Api.iml" filepath="$PROJECT_DIR$/Tik_Toc_Api/Tik_Toc_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tik_Toc_Common/Tik_Toc_Common.iml" filepath="$PROJECT_DIR$/Tik_Toc_Common/Tik_Toc_Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tik_Toc_Mapper/Tik_Toc_Mapper.iml" filepath="$PROJECT_DIR$/Tik_Toc_Mapper/Tik_Toc_Mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tik_Toc_Pojo/Tik_Toc_Pojo.iml" filepath="$PROJECT_DIR$/Tik_Toc_Pojo/Tik_Toc_Pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tik_Toc_Service/Tik_Toc_Service.iml" filepath="$PROJECT_DIR$/Tik_Toc_Service/Tik_Toc_Service.iml" />
+    </modules>
+  </component>
+</project>

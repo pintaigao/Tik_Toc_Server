@@ -13,5 +13,13 @@
         <module name="Tik_Toc_Service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Tik_Toc" target="1.8" />
+      <module name="Tik_Toc_Api" target="1.8" />
+      <module name="Tik_Toc_Common" target="1.8" />
+      <module name="Tik_Toc_Mapper" target="1.8" />
+      <module name="Tik_Toc_Pojo" target="1.8" />
+      <module name="Tik_Toc_Service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
