@@ -11,6 +11,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,6 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
@@ -95,18 +95,16 @@ public class UserController extends BasicController {
 
     @ApiOperation(value="查询用户信息", notes="查询用户信息的接口")
 //    @ApiImplicitParam(name="userId", value="用户id", required=true, dataType="String", paramType="query")
-    @PostMapping("/query")
+    @GetMapping("/query")
     public IMoocJSONResult query(String userId, String fanId) throws Exception {
-
         if (StringUtils.isBlank(userId)) {
             return IMoocJSONResult.errorMsg("用户id不能为空...");
         }
-
         Users userInfo = userService.queryUserInfo(userId);
         UsersVO userVO = new UsersVO();
         BeanUtils.copyProperties(userInfo, userVO);
 
-        userVO.setFollow(userService.queryIfFollow(userId, fanId));
+//        userVO.setFollow(userService.queryIfFollow(userId, fanId));
 
         return IMoocJSONResult.ok(userVO);
     }
