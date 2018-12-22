@@ -16,11 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(value = "用户注册登录的接口", tags = {"注册和登录的controller"})
-public class RegistLoginController extends BasicController {
+public class UserController extends BasicController {
 
     @Autowired
     private UserService userService;
@@ -72,7 +73,7 @@ public class RegistLoginController extends BasicController {
         // 2. 判断用户是否存在
         Users userResult = userService.queryUserForLogin(username, MD5Utils.getMD5Str(user.getPassword()));
 
-        // 3. 返回
+        // 3. 判读用户信息是否正确
         if (userResult != null) {
             userResult.setPassword("");
             UsersVO userVO = setUserRedisSessionToken(userResult);
@@ -80,6 +81,18 @@ public class RegistLoginController extends BasicController {
         } else {
             return IMoocJSONResult.errorMsg("用户名或密码不正确, 请重试...");
         }
+    }
+
+    /**
+     * Description: 用户注销的接口
+     */
+    @ApiOperation(value="用户注销", notes="用户注销的接口")
+    //@ApiImplicitParam(name="userId", value="用户id", required=true, dataType="String", paramType="query")
+    @PostMapping("/logout")
+    public IMoocJSONResult logout(String userId) throws Exception {
+        // 即把Redis的Key删掉就行了
+        redis.del(USER_REDIS_SESSION + ":" + userId);
+        return IMoocJSONResult.ok();
     }
 
 
