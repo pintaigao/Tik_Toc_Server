@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(value = "用户注册登录的接口", tags = {"注册和登录的controller"})
-public class UserController extends BasicController {
+public class RegistLoginController extends BasicController {
 
     @Autowired
     private UserService userService;
