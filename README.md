@@ -43,3 +43,17 @@ To simply said, this is the backend server of the app - TIK_TOC
      IOUtils.copy(inputStream, fileOutputStream);
      ```
 
+  3. 将这个路径上传到数据库中(需要在Service中实现**updateUserInfo**的方法)：
+
+     ```java
+     userService.updateUserInfo(user);
+     ```
+
+     然后在**updateUserInfo**中（创建Example.Criteria，并用内部方法updateByExampleSelective更新）：
+
+     ```java
+     Example userExample = new Example(Users.class);
+     Example.Criteria criteria = userExample.createCriteria();
+     criteria.andEqualTo("id", user.getId());
+     usersMapper.updateByExampleSelective(user, userExample);
+     ```

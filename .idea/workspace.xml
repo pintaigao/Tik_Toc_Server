@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="09434c8c-f1a0-484f-937a-8a80d4185578" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/RegistLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/RegistLoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Tik_Toc_Common/target/" />
     <ignored path="$PROJECT_DIR$/Tik_Toc_Mapper/target/" />
@@ -21,21 +22,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java">
+        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="467">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+            <state relative-caret-position="233">
+              <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
+                <element signature="e#2123#2124#0" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#2234#2235#0" expanded="true" />
+                <element signature="e#2493#2494#0" expanded="true" />
+                <element signature="e#2521#2522#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,6 +81,7 @@
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController2.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/RegistLoginController.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -158,7 +177,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545450007550" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545450623135" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3321839" />
@@ -280,12 +299,12 @@
       <workItem from="1545424037262" duration="1413000" />
       <workItem from="1545428852247" duration="84000" />
       <workItem from="1545428986048" duration="6342000" />
-      <workItem from="1545442485606" duration="4622000" />
+      <workItem from="1545442485606" duration="5318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12461000" />
+    <option name="totallyTimeSpent" value="13157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1280" y="23" width="1280" height="977" extended-state="0" />
@@ -404,10 +423,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+        <state relative-caret-position="467">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+          <folding>
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2123#2124#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2234#2235#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2521#2522#0" expanded="true" />
           </folding>
         </state>
       </provider>

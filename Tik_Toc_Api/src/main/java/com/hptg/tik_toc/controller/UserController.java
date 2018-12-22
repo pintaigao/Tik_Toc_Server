@@ -87,6 +87,7 @@ public class UserController extends BasicController {
         Users user = new Users();
         user.setId(userId);
         user.setFaceImage(uploadPathDB);
+        /* 将上传图像的相对路径同步到数据库中*/
         userService.updateUserInfo(user);
 
         return IMoocJSONResult.ok(uploadPathDB);
