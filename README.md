@@ -113,7 +113,19 @@ To simply said, this is the backend server of the app - TIK_TOC
   videosMapper.insertSelective(video);
   ```
 
-* 截取一个视频的封面
+* 截取一个视频的封面（小程序中的封面图是自动获取的)，然后上传和更新数据库:
+
+  ```java
+  @Transactional(propagation = Propagation.REQUIRED)
+  @Override
+  public void updateVideo(String videoId, String coverPath) {
+  	Videos video = new Videos();
+  	video.setId(videoId);
+  	video.setCoverPath(coverPath);
+  	videosMapper.updateByPrimaryKeySelective(video);
+  }
+  ```
+
 
 #### 三. BGM选择业务的开发
 

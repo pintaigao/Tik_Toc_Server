@@ -142,70 +142,52 @@ public class VideoController extends BasicController {
 
     }
 
-//    @ApiOperation(value = "上传封面", notes = "上传封面的接口")
-//    @ApiImplicitParams({
-//            @ApiImplicitParam(name = "userId", value = "用户id", required = true,
-//                    dataType = "String", paramType = "form"),
-//            @ApiImplicitParam(name = "videoId", value = "视频主键id", required = true,
-//                    dataType = "String", paramType = "form")
-//    })
-//    @PostMapping(value = "/uploadCover", headers = "content-type=multipart/form-data")
-//    public IMoocJSONResult uploadCover(String userId,
-//                                       String videoId,
-//                                       @ApiParam(value = "视频封面", required = true)
-//                                               MultipartFile file) throws Exception {
-//
-//        if (StringUtils.isBlank(videoId) || StringUtils.isBlank(userId)) {
-//            return IMoocJSONResult.errorMsg("视频主键id和用户id不能为空...");
-//        }
-//
-//        // 文件保存的命名空间
-////		String fileSpace = "C:/imooc_videos_dev";
-//        // 保存到数据库中的相对路径
-//        String uploadPathDB = "/" + userId + "/video";
-//
-//        FileOutputStream fileOutputStream = null;
-//        InputStream inputStream = null;
-//        // 文件上传的最终保存路径
-//        String finalCoverPath = "";
-//        try {
-//            if (file != null) {
-//
-//                String fileName = file.getOriginalFilename();
-//                if (StringUtils.isNotBlank(fileName)) {
-//
-//                    finalCoverPath = FILE_SPACE + uploadPathDB + "/" + fileName;
-//                    // 设置数据库保存的路径
-//                    uploadPathDB += ("/" + fileName);
-//
-//                    File outFile = new File(finalCoverPath);
-//                    if (outFile.getParentFile() != null || !outFile.getParentFile().isDirectory()) {
-//                        // 创建父文件夹
-//                        outFile.getParentFile().mkdirs();
-//                    }
-//
-//                    fileOutputStream = new FileOutputStream(outFile);
-//                    inputStream = file.getInputStream();
-//                    IOUtils.copy(inputStream, fileOutputStream);
-//                }
-//
-//            } else {
-//                return IMoocJSONResult.errorMsg("上传出错...");
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return IMoocJSONResult.errorMsg("上传出错...");
-//        } finally {
-//            if (fileOutputStream != null) {
-//                fileOutputStream.flush();
-//                fileOutputStream.close();
-//            }
-//        }
-//
-//        videoService.updateVideo(videoId, uploadPathDB);
-//
-//        return IMoocJSONResult.ok();
-//    }
+    @ApiOperation(value = "上传封面", notes = "上传封面的接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "userId", value = "用户id", required = true, dataType = "String", paramType = "form"),
+            @ApiImplicitParam(name = "videoId", value = "视频主键id", required = true, dataType = "String", paramType = "form")
+    })
+    @PostMapping(value = "/uploadCover", headers = "content-type=multipart/form-data")
+    public IMoocJSONResult uploadCover(String userId, String videoId, @ApiParam(value = "视频封面", required = true) MultipartFile file) throws Exception {
+        if (StringUtils.isBlank(videoId) || StringUtils.isBlank(userId)) {
+            return IMoocJSONResult.errorMsg("视频主键id和用户id不能为空...");
+        }
+        String uploadPathDB = "/" + userId + "/video";
+        FileOutputStream fileOutputStream = null;
+        InputStream inputStream = null;
+        // 文件上传的最终保存路径
+        String finalCoverPath = "";
+        try {
+            if (file != null) {
+                String fileName = file.getOriginalFilename();
+                if (StringUtils.isNotBlank(fileName)) {
+                    finalCoverPath = FILE_SPACE + uploadPathDB + "/" + fileName;
+                    // 设置数据库保存的路径
+                    uploadPathDB += ("/" + fileName);
+                    File outFile = new File(finalCoverPath);
+                    if (outFile.getParentFile() != null || !outFile.getParentFile().isDirectory()) {
+                        // 创建父文件夹
+                        outFile.getParentFile().mkdirs();
+                    }
+                    fileOutputStream = new FileOutputStream(outFile);
+                    inputStream = file.getInputStream();
+                    IOUtils.copy(inputStream, fileOutputStream);
+                }
+            } else {
+                return IMoocJSONResult.errorMsg("上传出错...");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return IMoocJSONResult.errorMsg("上传出错...");
+        } finally {
+            if (fileOutputStream != null) {
+                fileOutputStream.flush();
+                fileOutputStream.close();
+            }
+        }
+        videoService.updateVideo(videoId, uploadPathDB);
+        return IMoocJSONResult.ok();
+    }
 //
 //    /**
 //     * @Description: 分页和搜索查询视频列表
