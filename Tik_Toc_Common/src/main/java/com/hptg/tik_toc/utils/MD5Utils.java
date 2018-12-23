@@ -1,8 +1,8 @@
 package com.hptg.tik_toc.utils;
 
-import java.security.MessageDigest;
-
 import org.apache.commons.codec.binary.Base64;
+
+import java.security.MessageDigest;
 
 public class MD5Utils {
 

@@ -7,7 +7,7 @@ To simply said, this is the backend server of the app - TIK_TOC
 
 ### 开发过程
 
-####一. 用户信息的开发：
+#### 一. 用户信息的开发：
 
 * 开发Redis
   1. 按照视频把Redis搭建好
@@ -97,4 +97,40 @@ To simply said, this is the backend server of the app - TIK_TOC
 
 
 #### 二.短视频上传业务的开发
+
+* 上传视频，文件的上传和存储逻辑上都和上传头像是一样的:
+
+  唯一注意的是，上传的格式是**headers = "content-type=multipart/form-data"**(Postman中选择form-data但不用设置header)
+
+  ```java
+  @PostMapping(value = "/upload", headers = "content-type=multipart/form-data")
+      public IMoocJSONResult upload(String userId, String bgmId, double videoSeconds, int videoWidth, int videoHeight, String desc, @ApiParam(value = "短视频", required = true) MultipartFile file) throws Exception
+  ```
+
+* videoService中saveVideo
+
+  ```java
+  videosMapper.insertSelective(video);
+  ```
+
+* 截取一个视频的封面
+
+#### 三. BGM选择业务的开发
+
+* 获取所有的Bgm列表（/bgm/list），这个没什么好讲的，建立一个controller然后用Service去query所有的bgm
+
+  ```java
+  @Transactional(propagation = Propagation.SUPPORTS)
+  @Override
+  public List<Bgm> queryBgmList() {
+  	return bgmMapper.selectAll();
+  }
+  ```
+
+  同样获得某一个bgm直接：http://localhost:8081/BGM/TT.mp3, 因为之前已经设置过Tomcat的虚拟路径了
+
+
+
+
+
 

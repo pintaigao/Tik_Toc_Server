@@ -33,10 +33,6 @@ public class MergeVideoMp3 {
 		command.add("-y");
 		command.add(videoOutputPath);
 		
-//		for (String c : command) {
-//			System.out.print(c + " ");
-//		}
-		
 		ProcessBuilder builder = new ProcessBuilder(command);
 		Process process = builder.start();
 		
@@ -61,9 +57,9 @@ public class MergeVideoMp3 {
 	}
 
 	public static void main(String[] args) {
-		MergeVideoMp3 ffmpeg = new MergeVideoMp3("C:\\ffmpeg\\bin\\ffmpeg.exe");
+		MergeVideoMp3 ffmpeg = new MergeVideoMp3("ffmpeg");
 		try {
-			ffmpeg.convertor("C:\\苏州大裤衩.mp4", "C:\\music.mp3", 7.1, "C:\\这是通过java生产的视频.mp4");
+			ffmpeg.convertor("/Users/hptg/Downloads/QQ空间视频_20181222153906.mp4", "", 7, "/Users/hptg/Downloads/这是通过java生产的视频.mp4");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
