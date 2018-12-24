@@ -1,29 +1,26 @@
 package com.hptg.tik_toc.service;
 
-import java.util.List;
-
-import com.hptg.tik_toc.pojo.Comments;
 import com.hptg.tik_toc.pojo.Videos;
 import com.hptg.tik_toc.utils.PagedResult;
 
+
 public interface VideoService {
-	
-	/**
-	 * @Description: 保存视频
-	 */
-	public String saveVideo(Videos video);
-	
-	/**
-	 * @Description: 修改视频的封面
-	 */
-	public void updateVideo(String videoId, String coverPath);
-	
-//	/**
-//	 * @Description: 分页查询视频列表
-//	 */
-//	public PagedResult getAllVideos(Videos video, Integer isSaveRecord,
-//									Integer page, Integer pageSize);
-//
+
+    /**
+     * @Description: 保存视频
+     */
+    public String saveVideo(Videos video);
+
+    /**
+     * @Description: 修改视频的封面
+     */
+    public void updateVideo(String videoId, String coverPath);
+
+    /**
+     * @Description: 分页查询视频列表 page:要查询的页数 pageSize:显示的记录数
+     */
+    public PagedResult getAllVideos(Videos video, Integer isSaveRecord, Integer page, Integer pageSize);
+
 //	/**
 //	 * @Description: 查询我喜欢的视频列表
 //	 */

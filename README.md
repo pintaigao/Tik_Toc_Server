@@ -113,6 +113,12 @@ To simply said, this is the backend server of the app - TIK_TOC
   videosMapper.insertSelective(video);
   ```
 
+* 用ffmpeg截取视频的第一秒的图：
+
+  ```java
+  
+  ```
+
 * 截取一个视频的封面（小程序中的封面图是自动获取的)，然后上传和更新数据库:
 
   ```java
@@ -142,7 +148,56 @@ To simply said, this is the backend server of the app - TIK_TOC
   同样获得某一个bgm直接：http://localhost:8081/BGM/TT.mp3, 因为之前已经设置过Tomcat的虚拟路径了
 
 
+#### 四.小视频的展示
 
+* 编写自定义的mapper：因为在视频展示页面，同时要获取两个东西，视频和用户信息同时展示，所以要自定义mapper，修改query语句来实现**关联查询**
 
+  1. 新建自定义的VideoVO，匹配首页展示的数据（其实就是把User Pojo和Video Pojo的一些东西结合起来）
 
+  2. 新建VideosMapperCustom
 
+     ``` java
+     /**
+      * @Description: 条件查询所有视频列表
+      */
+     public List<VideosVO> queryAllVideos(@Param("videoDesc") String videoDesc,@Param("userId") String userId);
+     /**
+      * @Description: 查询关注的视频
+      */
+     public List<VideosVO> queryMyFollowVideos(String userId);
+     /**
+      * @Description: 查询点赞视频
+      */
+     public List<VideosVO> queryMyLikeVideos(@Param("userId") String userId);
+     /**
+      * @Description: 对视频喜欢的数量进行累加
+      */
+     public void addVideoLikeCount(String videoId);
+     /**
+      * @Description: 对视频喜欢的数量进行累减
+      */
+     public void reduceVideoLikeCount(String videoId);
+     ```
+
+  3. 新建VideosMapperCustom.xml，这里进行SQL语句的修改
+
+     ```sql
+      <select id="queryAllVideos" resultMap="BaseResultMap" parameterType="String">
+       	select v.*,u.face_image as face_image,u.nickname as nickname from videos v
+       	left join users u on u.id = v.user_id
+       	where
+       		1 = 1 // 这个就这样子了我也不知道为什么
+       		<if test=" videoDesc != null and videoDesc != '' ">
+       			and v.video_desc like '%${videoDesc}%'
+       		</if>
+       		<if test=" userId != null and userId != '' ">  
+     			and v.user_id = #{userId}
+     		</if>
+       		and v.status = 1
+       	order by v.create_time desc
+       </select>
+     ```
+
+  4. 分页查询，使用的是外部的一个PageHelper.java(com.github.pagehelper)
+
+     ![PageHelper原理](/Users/hptg/Documents/Project/Spring/Tik_Toc/Resources/PageHelper原理.png)

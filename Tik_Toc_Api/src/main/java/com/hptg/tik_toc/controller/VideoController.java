@@ -71,13 +71,13 @@ public class VideoController extends BasicController {
             if (file != null) {
                 String fileName = file.getOriginalFilename();
                 // abc.mp4
-//                String arrayFilenameItem[] = fileName.split("\\.");
-//                String fileNamePrefix = "";
-//                for (int i = 0; i < arrayFilenameItem.length - 1; i++) {
-//                    fileNamePrefix += arrayFilenameItem[i];
-//                }
+                String arrayFilenameItem[] = fileName.split("\\.");
+                String fileNamePrefix = "";
+                for (int i = 0; i < arrayFilenameItem.length - 1; i++) {
+                    fileNamePrefix += arrayFilenameItem[i];
+                }
                 // fix bug: 解决小程序端OK，PC端不OK的bug，原因：PC端和小程序端对临时视频的命名不同
-                String fileNamePrefix = fileName.split("\\.")[0];
+                // String fileNamePrefix = fileName.split("\\.")[0];
                 if (StringUtils.isNotBlank(fileName)) {
                     finalVideoPath = FILE_SPACE + uploadPathDB + "/" + fileName;
                     // 设置数据库保存的路径
@@ -121,11 +121,11 @@ public class VideoController extends BasicController {
         System.out.println("uploadPathDB=" + uploadPathDB);
         System.out.println("finalVideoPath=" + finalVideoPath);
 
-//        // 对视频进行截图
-//        FetchVideoCover videoInfo = new FetchVideoCover(FFMPEG_EXE);
-//        videoInfo.getCover(finalVideoPath, FILE_SPACE + coverPathDB);
-//
-//        // 保存视频信息到数据库
+        // 对视频进行截图
+        FetchVideoCover videoInfo = new FetchVideoCover(FFMPEG_EXE);
+        videoInfo.getCover(finalVideoPath, FILE_SPACE + coverPathDB);
+
+        // 保存视频信息到数据库
         Videos video = new Videos();
         video.setAudioId(bgmId);
         video.setUserId(userId);
