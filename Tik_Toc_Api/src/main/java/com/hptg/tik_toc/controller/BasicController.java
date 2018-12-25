@@ -15,4 +15,7 @@ public class BasicController {
     
     public static final String FFMPEG_EXE = "ffmpeg";
 
+    // 每页分页的记录数
+    public static final int PAGE_SIZE = 5;
+
 }

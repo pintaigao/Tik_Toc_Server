@@ -198,6 +198,12 @@ To simply said, this is the backend server of the app - TIK_TOC
        </select>
      ```
 
-  4. 分页查询，使用的是外部的一个PageHelper.java(com.github.pagehelper)
+  4. 分页查询，使用的是外部的一个PageHelper.java(com.github.pagehelper)，自定义的一个PageResult（用于展示页面的信息封装）
 
      ![PageHelper原理](/Users/hptg/Documents/Project/Spring/Tik_Toc/Resources/PageHelper原理.png)
+
+  5. 查询视频的接口
+
+
+#### 五.热搜词的接口开发
+

@@ -83,12 +83,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUserFanRelation(String userId, String fanId) {
-
     }
 
     @Override
     public void deleteUserFanRelation(String userId, String fanId) {
-
     }
 
     @Override

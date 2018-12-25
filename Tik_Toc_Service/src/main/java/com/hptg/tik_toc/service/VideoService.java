@@ -3,6 +3,8 @@ package com.hptg.tik_toc.service;
 import com.hptg.tik_toc.pojo.Videos;
 import com.hptg.tik_toc.utils.PagedResult;
 
+import java.util.List;
+
 
 public interface VideoService {
 
@@ -21,6 +23,11 @@ public interface VideoService {
      */
     public PagedResult getAllVideos(Videos video, Integer isSaveRecord, Integer page, Integer pageSize);
 
+    /**
+     * @Description: 获取热搜词列表
+     */
+    public List<String> getHotwords();
+
 //	/**
 //	 * @Description: 查询我喜欢的视频列表
 //	 */
@@ -31,10 +38,6 @@ public interface VideoService {
 //	 */
 //	public PagedResult queryMyFollowVideos(String userId, Integer page, Integer pageSize);
 //
-//	/**
-//	 * @Description: 获取热搜词列表
-//	 */
-//	public List<String> getHotwords();
 //
 //	/**
 //	 * @Description: 用户喜欢/点赞视频

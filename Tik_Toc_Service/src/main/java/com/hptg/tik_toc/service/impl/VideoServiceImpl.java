@@ -103,7 +103,16 @@ public class VideoServiceImpl implements VideoService {
         return pagedResult;
     }
 
-//	@Transactional(propagation = Propagation.SUPPORTS)
+    /**
+     * Description: 获取热搜词
+     **/
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public List<String> getHotwords() {
+        return searchRecordsMapper.getHotwords();
+    }
+
+    //	@Transactional(propagation = Propagation.SUPPORTS)
 //	@Override
 //	public PagedResult queryMyLikeVideos(String userId, Integer page, Integer pageSize) {
 //		PageHelper.startPage(page, pageSize);
@@ -137,12 +146,8 @@ public class VideoServiceImpl implements VideoService {
 //		return pagedResult;
 //	}
 //
-//	@Transactional(propagation = Propagation.SUPPORTS)
-//	@Override
-//	public List<String> getHotwords() {
-//		return searchRecordsMapper.getHotwords();
-//	}
-//
+
+
 //	@Transactional(propagation = Propagation.REQUIRED)
 //	@Override
 //	public void userLikeVideo(String userId, String videoId, String videoCreaterId) {

@@ -9,6 +9,7 @@ import java.util.UUID;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -188,29 +189,33 @@ public class VideoController extends BasicController {
         videoService.updateVideo(videoId, uploadPathDB);
         return IMoocJSONResult.ok();
     }
-//
-//    /**
-//     * @Description: 分页和搜索查询视频列表
-//     * isSaveRecord：1 - 需要保存
-//     * 0 - 不需要保存 ，或者为空的时候
-//     */
-//    @PostMapping(value = "/showAll")
-//    public IMoocJSONResult showAll(@RequestBody Videos video, Integer isSaveRecord,
-//                                   Integer page, Integer pageSize) throws Exception {
-//
-//        if (page == null) {
-//            page = 1;
-//        }
-//
-//        if (pageSize == null) {
-//            pageSize = PAGE_SIZE;
-//        }
-//
-//        PagedResult result = videoService.getAllVideos(video, isSaveRecord, page, pageSize);
-//        return IMoocJSONResult.ok(result);
-//    }
-//
-//    /**
+
+    /**
+     * @Description: 分页和搜索查询视频列表
+     * isSaveRecord：1 - 需要保存
+     * 0 - 不需要保存 ，或者为空的时候
+     */
+    @PostMapping(value = "/showAll")
+    public IMoocJSONResult showAll(@RequestBody Videos video, Integer isSaveRecord, Integer page, Integer pageSize) {
+        if (page == null) {
+            page = 1;
+        }
+        if (pageSize == null) {
+            pageSize = PAGE_SIZE;
+        }
+        PagedResult result = videoService.getAllVideos(video, isSaveRecord, page, pageSize);
+        return IMoocJSONResult.ok(result);
+    }
+
+    /**
+     * @Description: 获取热搜词
+     */
+    @GetMapping(value = "/hot")
+    public IMoocJSONResult hot() throws Exception {
+        return IMoocJSONResult.ok(videoService.getHotwords());
+    }
+
+    //    /**
 //     * @Description: 我关注的人发的视频
 //     */
 //    @PostMapping("/showMyFollow")
@@ -254,10 +259,7 @@ public class VideoController extends BasicController {
 //        return IMoocJSONResult.ok(videosList);
 //    }
 //
-//    @PostMapping(value = "/hot")
-//    public IMoocJSONResult hot() throws Exception {
-//        return IMoocJSONResult.ok(videoService.getHotwords());
-//    }
+
 //
 //    @PostMapping(value = "/userLike")
 //    public IMoocJSONResult userLike(String userId, String videoId, String videoCreaterId)
