@@ -62,9 +62,7 @@ public class Videos {
     private Long likeCounts;
 
     /**
-     * 视频状态：
-1、发布成功
-2、禁止播放，管理员操作
+     * 视频状态： 1、发布成功 2、禁止播放，管理员操作
      */
     private Integer status;
 

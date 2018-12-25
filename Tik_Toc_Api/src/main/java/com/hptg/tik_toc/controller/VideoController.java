@@ -194,6 +194,7 @@ public class VideoController extends BasicController {
      * @Description: 分页和搜索查询视频列表
      * isSaveRecord：1 - 需要保存
      * 0 - 不需要保存 ，或者为空的时候
+     * P.s: @RequestBody 虽然是Videos CLass，但是在Postman中不用完全把所有的属性都写到json data中，需要什么就写什么，像这里需要videoDesc就只写videoDesc
      */
     @PostMapping(value = "/showAll")
     public IMoocJSONResult showAll(@RequestBody Videos video, Integer isSaveRecord, Integer page, Integer pageSize) {

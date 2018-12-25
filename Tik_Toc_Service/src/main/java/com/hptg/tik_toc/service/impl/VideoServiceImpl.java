@@ -1,6 +1,5 @@
 package com.hptg.tik_toc.service.impl;
 
-import java.util.Date;
 import java.util.List;
 
 import org.n3r.idworker.Sid;
@@ -17,18 +16,11 @@ import com.hptg.tik_toc.mapper.UsersLikeVideosMapper;
 import com.hptg.tik_toc.mapper.UsersMapper;
 import com.hptg.tik_toc.mapper.VideosMapper;
 import com.hptg.tik_toc.mapper.VideosMapperCustom;
-import com.hptg.tik_toc.pojo.Comments;
 import com.hptg.tik_toc.pojo.SearchRecords;
-import com.hptg.tik_toc.pojo.UsersLikeVideos;
 import com.hptg.tik_toc.pojo.Videos;
-import com.hptg.tik_toc.pojo.vo.CommentsVO;
 import com.hptg.tik_toc.pojo.vo.VideosVO;
 import com.hptg.tik_toc.service.VideoService;
 import com.hptg.tik_toc.utils.PagedResult;
-import com.hptg.tik_toc.utils.TimeAgoUtils;
-
-import tk.mybatis.mapper.entity.Example;
-import tk.mybatis.mapper.entity.Example.Criteria;
 
 @Service
 public class VideoServiceImpl implements VideoService {
