@@ -93,6 +93,10 @@ public class UserController extends BasicController {
         return IMoocJSONResult.ok(uploadPathDB);
     }
 
+    /**
+     * Description: 查询某用户的信息
+     * userId:被查询者的Id，fanId：登录用户的id
+     */
     @ApiOperation(value = "查询用户信息", notes = "查询用户信息的接口")
     @ApiImplicitParam(name = "userId", value = "用户id", required = true, dataType = "String", paramType = "query")
     @GetMapping("/query")
@@ -103,9 +107,8 @@ public class UserController extends BasicController {
         Users userInfo = userService.queryUserInfo(userId);
         UsersVO userVO = new UsersVO();
         BeanUtils.copyProperties(userInfo, userVO);
-
-//        userVO.setFollow(userService.queryIfFollow(userId, fanId));
-
+        System.out.println(userService.queryIfFollow(userId, fanId));
+        userVO.setIsFollow(userService.queryIfFollow(userId, fanId));
         return IMoocJSONResult.ok(userVO);
     }
 

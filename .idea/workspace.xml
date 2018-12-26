@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09434c8c-f1a0-484f-937a-8a80d4185578" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/vo/UsersVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/vo/UsersVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/UsersVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/UsersVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/VideoServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Tik_Toc_Common/target/" />
     <ignored path="$PROJECT_DIR$/Tik_Toc_Mapper/target/" />
@@ -19,29 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="118" column="13" lean-forward="true" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="150" column="22" selection-start-line="150" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,7 +45,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/vo/UsersVO.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Common/src/main/java/com/hptg/tik_toc/utils/RedisOperator.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController2.java" />
@@ -84,11 +66,12 @@
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/VideosMapperCustom.xml" />
         <option value="$PROJECT_DIR$/Tik_Toc_Mapper/src/main/java/com.hptg.tik_toc.mapper/UsersMapper.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/UsersMapper.xml" />
-        <option value="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/VideoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/VideoService.java" />
-        <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/VideoController.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/vo/UsersVO.java" />
         <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/VideoController.java" />
+        <option value="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/VideoService.java" />
+        <option value="$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/VideoServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -100,8 +83,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2148" />
-    <option name="y" value="44" />
+    <option name="x" value="-1280" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="988" />
   </component>
@@ -229,7 +212,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545801990189" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545810534514" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3321839" />
@@ -372,16 +355,15 @@
       <workItem from="1545442485606" duration="27289000" />
       <workItem from="1545629777116" duration="1465000" />
       <workItem from="1545675650338" duration="4882000" />
-      <workItem from="1545770076490" duration="12587000" />
+      <workItem from="1545770076490" duration="16551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54062000" />
+    <option name="totallyTimeSpent" value="58026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2148" y="44" width="1280" height="988" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1280" y="23" width="1280" height="988" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984456" visible="true" weight="0.25282714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -393,7 +375,7 @@
       <window_info id="Web" order="7" sideWeight="0.5015544" side_tool="true" weight="0.29725364" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3560268" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3560268" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39954597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -402,7 +384,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3284091" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.328125" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -469,13 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/vo/UsersVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -670,20 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Mapper/src/main/java/com.hptg.tik_toc.mapper/VideosMapperCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/VideosMapperCustom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tik_Toc_Mapper/src/main/java/com.hptg.tik_toc.mapper/UsersLikeVideosMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -702,16 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/VideoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="250" column="11" lean-forward="true" selection-start-line="250" selection-start-column="11" selection-end-line="250" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -735,26 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/VideoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="163" column="45" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/VideoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="51" selection-start-line="45" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tik_Toc_Mapper/src/main/java/com.hptg.tik_toc.mapper/UsersFansMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -769,34 +700,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="184">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/UsersMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="118" column="13" lean-forward="true" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="150" column="22" selection-start-line="150" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
+        <state relative-caret-position="211">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Pojo/src/main/java/com/hptg/tik_toc/pojo/vo/UsersVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1610">
+          <caret line="204" column="21" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
+          <folding>
+            <element signature="e#3278#3279#0" expanded="true" />
+            <element signature="e#3305#3306#0" expanded="true" />
+            <element signature="e#3349#3350#0" expanded="true" />
+            <element signature="e#3380#3381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/UsersMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Mapper/src/main/java/com.hptg.tik_toc.mapper/VideosMapperCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/VideosMapperCustom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/impl/VideoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3105">
+          <caret line="209" column="27" lean-forward="true" selection-start-line="209" selection-start-column="27" selection-end-line="209" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="263" column="5" lean-forward="true" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tik_Toc_Service/src/main/java/com/hptg/tik_toc/service/VideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

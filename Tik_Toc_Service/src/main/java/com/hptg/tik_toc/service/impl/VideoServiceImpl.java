@@ -1,5 +1,6 @@
 package com.hptg.tik_toc.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.n3r.idworker.Sid;
@@ -16,12 +17,15 @@ import com.hptg.tik_toc.mapper.UsersLikeVideosMapper;
 import com.hptg.tik_toc.mapper.UsersMapper;
 import com.hptg.tik_toc.mapper.VideosMapper;
 import com.hptg.tik_toc.mapper.VideosMapperCustom;
+import com.hptg.tik_toc.pojo.Comments;
 import com.hptg.tik_toc.pojo.SearchRecords;
 import com.hptg.tik_toc.pojo.UsersLikeVideos;
 import com.hptg.tik_toc.pojo.Videos;
+import com.hptg.tik_toc.pojo.vo.CommentsVO;
 import com.hptg.tik_toc.pojo.vo.VideosVO;
 import com.hptg.tik_toc.service.VideoService;
 import com.hptg.tik_toc.utils.PagedResult;
+import com.hptg.tik_toc.utils.TimeAgoUtils;
 
 import tk.mybatis.mapper.entity.Example;
 
@@ -107,59 +111,58 @@ public class VideoServiceImpl implements VideoService {
         return searchRecordsMapper.getHotwords();
     }
 
-    //	@Transactional(propagation = Propagation.SUPPORTS)
-//	@Override
-//	public PagedResult queryMyLikeVideos(String userId, Integer page, Integer pageSize) {
-//		PageHelper.startPage(page, pageSize);
-//		List<VideosVO> list = videosMapperCustom.queryMyLikeVideos(userId);
-//
-//		PageInfo<VideosVO> pageList = new PageInfo<>(list);
-//
-//		PagedResult pagedResult = new PagedResult();
-//		pagedResult.setTotal(pageList.getPages());
-//		pagedResult.setRows(list);
-//		pagedResult.setPage(page);
-//		pagedResult.setRecords(pageList.getTotal());
-//
-//		return pagedResult;
-//	}
-//
-//	@Transactional(propagation = Propagation.SUPPORTS)
-//	@Override
-//	public PagedResult queryMyFollowVideos(String userId, Integer page, Integer pageSize) {
-//		PageHelper.startPage(page, pageSize);
-//		List<VideosVO> list = videosMapperCustom.queryMyFollowVideos(userId);
-//
-//		PageInfo<VideosVO> pageList = new PageInfo<>(list);
-//
-//		PagedResult pagedResult = new PagedResult();
-//		pagedResult.setTotal(pageList.getPages());
-//		pagedResult.setRows(list);
-//		pagedResult.setPage(page);
-//		pagedResult.setRecords(pageList.getTotal());
-//
-//		return pagedResult;
-//	}
-//
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedResult queryMyLikeVideos(String userId, Integer page, Integer pageSize) {
+        PageHelper.startPage(page, pageSize);
+        List<VideosVO> list = videosMapperCustom.queryMyLikeVideos(userId);
+
+        PageInfo<VideosVO> pageList = new PageInfo<>(list);
+
+        PagedResult pagedResult = new PagedResult();
+        pagedResult.setTotal(pageList.getPages());
+        pagedResult.setRows(list);
+        pagedResult.setPage(page);
+        pagedResult.setRecords(pageList.getTotal());
+
+        return pagedResult;
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedResult queryMyFollowVideos(String userId, Integer page, Integer pageSize) {
+        PageHelper.startPage(page, pageSize);
+        List<VideosVO> list = videosMapperCustom.queryMyFollowVideos(userId);
+
+        PageInfo<VideosVO> pageList = new PageInfo<>(list);
+
+        PagedResult pagedResult = new PagedResult();
+        pagedResult.setTotal(pageList.getPages());
+        pagedResult.setRows(list);
+        pagedResult.setPage(page);
+        pagedResult.setRecords(pageList.getTotal());
+
+        return pagedResult;
+    }
 
 
-	@Transactional(propagation = Propagation.REQUIRED)
-	@Override
-	public void userLikeVideo(String userId, String videoId, String videoCreaterId) {
-		// 1. 保存用户和视频的喜欢点赞关联关系表
-		String likeId = sid.nextShort();
-		UsersLikeVideos ulv = new UsersLikeVideos();
-		ulv.setId(likeId);
-		ulv.setUserId(userId);
-		ulv.setVideoId(videoId);
-		usersLikeVideosMapper.insert(ulv);
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void userLikeVideo(String userId, String videoId, String videoCreaterId) {
+        // 1. 保存用户和视频的喜欢点赞关联关系表
+        String likeId = sid.nextShort();
+        UsersLikeVideos ulv = new UsersLikeVideos();
+        ulv.setId(likeId);
+        ulv.setUserId(userId);
+        ulv.setVideoId(videoId);
+        usersLikeVideosMapper.insert(ulv);
 
-		// 2. 视频喜欢数量累加
-		videosMapperCustom.addVideoLikeCount(videoId);
+        // 2. 视频喜欢数量累加
+        videosMapperCustom.addVideoLikeCount(videoId);
 
-		// 3. 用户受喜欢数量的累加
-		usersMapper.addReceiveLikeCount(videoCreaterId);
-	}
+        // 3. 用户受喜欢数量的累加
+        usersMapper.addReceiveLikeCount(videoCreaterId);
+    }
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
@@ -179,20 +182,20 @@ public class VideoServiceImpl implements VideoService {
         usersMapper.reduceReceiveLikeCount(videoCreaterId);
 
     }
-//
-//	@Transactional(propagation = Propagation.REQUIRED)
-//	@Override
-//	public void saveComment(Comments comment) {
-//		String id = sid.nextShort();
-//		comment.setId(id);
-//		comment.setCreateTime(new Date());
-//		commentMapper.insert(comment);
-//	}
-//
-//	@Transactional(propagation = Propagation.SUPPORTS)
-//	@Override
-//	public PagedResult getAllComments(String videoId, Integer page, Integer pageSize) {
-//
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void saveComment(Comments comment) {
+        String id = sid.nextShort();
+        comment.setId(id);
+        comment.setCreateTime(new Date());
+        commentMapper.insert(comment);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedResult getAllComments(String videoId, Integer page, Integer pageSize) {
+
 //		PageHelper.startPage(page, pageSize);
 //
 //		List<CommentsVO> list = commentMapperCustom.queryComments(videoId);
@@ -204,13 +207,13 @@ public class VideoServiceImpl implements VideoService {
 //
 //		PageInfo<CommentsVO> pageList = new PageInfo<>(list);
 //
-//		PagedResult grid = new PagedResult();
+        PagedResult grid = new PagedResult();
 //		grid.setTotal(pageList.getPages());
 //		grid.setRows(list);
 //		grid.setPage(page);
 //		grid.setRecords(pageList.getTotal());
 //
-//		return grid;
-//	}
+        return grid;
+    }
 
 }

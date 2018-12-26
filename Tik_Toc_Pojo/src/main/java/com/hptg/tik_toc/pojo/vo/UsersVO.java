@@ -197,11 +197,11 @@ public class UsersVO {
 		this.userToken = userToken;
 	}
 
-	public boolean isFollow() {
-		return isFollow;
+	public boolean getIsFollow() {
+		return this.isFollow;
 	}
 
-	public void setFollow(boolean isFollow) {
+	public void setIsFollow(boolean isFollow) {
 		this.isFollow = isFollow;
 	}
 }
