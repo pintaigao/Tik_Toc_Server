@@ -39,16 +39,16 @@ public interface VideoService {
 //	public PagedResult queryMyFollowVideos(String userId, Integer page, Integer pageSize);
 //
 //
-//	/**
-//	 * @Description: 用户喜欢/点赞视频
-//	 */
-//	public void userLikeVideo(String userId, String videoId, String videoCreaterId);
-//
-//	/**
-//	 * @Description: 用户不喜欢/取消点赞视频
-//	 */
-//	public void userUnLikeVideo(String userId, String videoId, String videoCreaterId);
-//
+	/**
+	 * @Description: 用户喜欢/点赞视频
+	 */
+	public void userLikeVideo(String userId, String videoId, String videoCreaterId);
+
+    /**
+     * @Description: 用户不喜欢/取消点赞视频
+     */
+    public void userUnLikeVideo(String userId, String videoId, String videoCreaterId);
+
 //	/**
 //	 * @Description: 用户留言
 //	 */

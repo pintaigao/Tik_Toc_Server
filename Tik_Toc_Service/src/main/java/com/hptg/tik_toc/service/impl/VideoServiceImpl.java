@@ -17,10 +17,13 @@ import com.hptg.tik_toc.mapper.UsersMapper;
 import com.hptg.tik_toc.mapper.VideosMapper;
 import com.hptg.tik_toc.mapper.VideosMapperCustom;
 import com.hptg.tik_toc.pojo.SearchRecords;
+import com.hptg.tik_toc.pojo.UsersLikeVideos;
 import com.hptg.tik_toc.pojo.Videos;
 import com.hptg.tik_toc.pojo.vo.VideosVO;
 import com.hptg.tik_toc.service.VideoService;
 import com.hptg.tik_toc.utils.PagedResult;
+
+import tk.mybatis.mapper.entity.Example;
 
 @Service
 public class VideoServiceImpl implements VideoService {
@@ -140,44 +143,42 @@ public class VideoServiceImpl implements VideoService {
 //
 
 
-//	@Transactional(propagation = Propagation.REQUIRED)
-//	@Override
-//	public void userLikeVideo(String userId, String videoId, String videoCreaterId) {
-//		// 1. 保存用户和视频的喜欢点赞关联关系表
-//		String likeId = sid.nextShort();
-//		UsersLikeVideos ulv = new UsersLikeVideos();
-//		ulv.setId(likeId);
-//		ulv.setUserId(userId);
-//		ulv.setVideoId(videoId);
-//		usersLikeVideosMapper.insert(ulv);
-//
-//		// 2. 视频喜欢数量累加
-//		videosMapperCustom.addVideoLikeCount(videoId);
-//
-//		// 3. 用户受喜欢数量的累加
-//		usersMapper.addReceiveLikeCount(videoCreaterId);
-//	}
-//
-//	@Transactional(propagation = Propagation.REQUIRED)
-//	@Override
-//	public void userUnLikeVideo(String userId, String videoId, String videoCreaterId) {
-//		// 1. 删除用户和视频的喜欢点赞关联关系表
-//
-//		Example example = new Example(UsersLikeVideos.class);
-//		Criteria criteria = example.createCriteria();
-//
-//		criteria.andEqualTo("userId", userId);
-//		criteria.andEqualTo("videoId", videoId);
-//
-//		usersLikeVideosMapper.deleteByExample(example);
-//
-//		// 2. 视频喜欢数量累减
-//		videosMapperCustom.reduceVideoLikeCount(videoId);
-//
-//		// 3. 用户受喜欢数量的累减
-//		usersMapper.reduceReceiveLikeCount(videoCreaterId);
-//
-//	}
+	@Transactional(propagation = Propagation.REQUIRED)
+	@Override
+	public void userLikeVideo(String userId, String videoId, String videoCreaterId) {
+		// 1. 保存用户和视频的喜欢点赞关联关系表
+		String likeId = sid.nextShort();
+		UsersLikeVideos ulv = new UsersLikeVideos();
+		ulv.setId(likeId);
+		ulv.setUserId(userId);
+		ulv.setVideoId(videoId);
+		usersLikeVideosMapper.insert(ulv);
+
+		// 2. 视频喜欢数量累加
+		videosMapperCustom.addVideoLikeCount(videoId);
+
+		// 3. 用户受喜欢数量的累加
+		usersMapper.addReceiveLikeCount(videoCreaterId);
+	}
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void userUnLikeVideo(String userId, String videoId, String videoCreaterId) {
+        // 1. 删除用户和视频的喜欢点赞关联关系表
+        Example example = new Example(UsersLikeVideos.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId", userId);
+        criteria.andEqualTo("videoId", videoId);
+
+        usersLikeVideosMapper.deleteByExample(example);
+
+        // 2. 视频喜欢数量累减
+        videosMapperCustom.reduceVideoLikeCount(videoId);
+
+        // 3. 用户受喜欢数量的累减
+        usersMapper.reduceReceiveLikeCount(videoCreaterId);
+
+    }
 //
 //	@Transactional(propagation = Propagation.REQUIRED)
 //	@Override

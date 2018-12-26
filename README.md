@@ -207,3 +207,64 @@ To simply said, this is the backend server of the app - TIK_TOC
 
 #### 五.热搜词的接口开发
 
+#### 六.拦截器接口的开发（为防止未认证用户暴力查询到所有信息）
+
+* 实现HandlerInterceptor的接口（preHandle，postHandle，afterCompletion），return true or false
+
+  ```java
+   /**
+    * 拦截请求，在controller调用之前
+    */
+  @Override
+  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
+      ...
+  }
+   /**
+    * 请求controller之后，渲染视图之前
+    */
+  @Override
+  public void postHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, ModelAndView arg3) throws Exception {
+      ...
+  }
+  
+  /**
+   * 请求controller之后，视图渲染之后
+   */
+  @Override
+  public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3) throws Exception {
+      ...
+  }
+  ```
+
+
+#### 七.视频点赞和取消点赞的开发
+
+* 对自定义的VideoCustomMapper改造：Java 文件新增addVideoLikeCount，xml文件新增相关sql语句
+
+  ```java
+  public void addVideoLikeCount(String videoId);
+  ```
+
+  ```xml
+  <update id="addVideoLikeCount" parameterType="String">
+    	update videos set like_counts=like_counts+1 where id=#{videoId}
+  </update>
+  ```
+
+
+
+#### 八.进入某个视频出查询所有视频的信息
+
+
+
+
+
+
+
+
+
+
+
+
+
+

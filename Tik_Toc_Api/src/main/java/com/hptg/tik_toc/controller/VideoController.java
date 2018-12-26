@@ -24,8 +24,11 @@ import com.hptg.tik_toc.service.BgmService;
 import com.hptg.tik_toc.service.VideoService;
 import com.hptg.tik_toc.utils.FetchVideoCover;
 import com.hptg.tik_toc.utils.IMoocJSONResult;
+import com.hptg.tik_toc.utils.JsonUtils;
 import com.hptg.tik_toc.utils.MergeVideoMp3;
 import com.hptg.tik_toc.utils.PagedResult;
+
+import javax.servlet.http.HttpServletRequest;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -261,19 +264,17 @@ public class VideoController extends BasicController {
 //    }
 //
 
-//
-//    @PostMapping(value = "/userLike")
-//    public IMoocJSONResult userLike(String userId, String videoId, String videoCreaterId)
-//            throws Exception {
-//        videoService.userLikeVideo(userId, videoId, videoCreaterId);
-//        return IMoocJSONResult.ok();
-//    }
-//
-//    @PostMapping(value = "/userUnLike")
-//    public IMoocJSONResult userUnLike(String userId, String videoId, String videoCreaterId) throws Exception {
-//        videoService.userUnLikeVideo(userId, videoId, videoCreaterId);
-//        return IMoocJSONResult.ok();
-//    }
+    @PostMapping(value = "/userLike")
+    public IMoocJSONResult userLike(String userId, String videoId, String videoCreaterId) throws Exception {
+        videoService.userLikeVideo(userId, videoId, videoCreaterId);
+        return IMoocJSONResult.ok();
+    }
+
+    @PostMapping(value = "/userUnLike")
+    public IMoocJSONResult userUnLike(String userId, String videoId, String videoCreaterId) throws Exception {
+        videoService.userUnLikeVideo(userId, videoId, videoCreaterId);
+        return IMoocJSONResult.ok();
+    }
 //
 //    @PostMapping("/saveComment")
 //    public IMoocJSONResult saveComment(@RequestBody Comments comment,

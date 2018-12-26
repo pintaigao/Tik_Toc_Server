@@ -1,6 +1,7 @@
 package com.hptg.tik_toc;
 
 import com.hptg.tik_toc.controller.BasicController;
+import com.hptg.tik_toc.controller.interceptor.MiniInterceptor;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,22 +25,26 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 //    public ZKCuratorClient zkCuratorClient() {
 //        return new ZKCuratorClient();
 //    }
-//
-//    @Bean\
-//    public MiniInterceptor miniInterceptor() {
-//        return new MiniInterceptor();
-//    }
-//
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//
-//        registry.addInterceptor(miniInterceptor()).addPathPatterns("/user/**")
-//                .addPathPatterns("/video/upload", "/video/uploadCover",
-//                        "/video/userLike", "/video/userUnLike",
-//                        "/video/saveComment")
-//                .addPathPatterns("/bgm/**")
-//                .excludePathPatterns("/user/queryPublisher");
-//
-//        super.addInterceptors(registry);
-//    }
+
+    /**
+     * Description：注册拦截器，和下面那个addInterceptors是一起的
+     **/
+    @Bean
+    public MiniInterceptor miniInterceptor() {
+        return new MiniInterceptor();
+    }
+
+    /**
+     * Description：所有的 /user/** api url 都要通过拦截
+     **/
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+
+        registry.addInterceptor(miniInterceptor())
+                .addPathPatterns("/user/**")
+                .addPathPatterns("/video/upload", "/video/uploadCover", "/video/userLike", "/video/userUnLike", "/video/saveComment")
+                .addPathPatterns("/bgm/**")
+                .excludePathPatterns("/user/queryPublisher");
+        super.addInterceptors(registry);
+    }
 }

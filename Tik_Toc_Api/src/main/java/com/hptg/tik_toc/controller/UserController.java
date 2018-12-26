@@ -24,25 +24,25 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@Api(value="用户相关业务的接口", tags= {"用户相关业务的controller"})
+@Api(value = "用户相关业务的接口", tags = {"用户相关业务的controller"})
 @RequestMapping("/user")
 public class UserController extends BasicController {
 
     @Autowired
     private UserService userService;
 
-    @ApiOperation(value="用户上传头像", notes="用户上传头像的接口")
-//    @ApiImplicitParam(name="userId", value="用户id", required=true, dataType="String", paramType="query")
+    @ApiOperation(value = "用户上传头像", notes = "用户上传头像的接口")
+    @ApiImplicitParam(name="userId", value="用户id", required=true, dataType="String", paramType="query")
     @PostMapping("/uploadFace")
     public IMoocJSONResult uploadFace(String userId, @RequestParam("file") MultipartFile[] files) throws Exception {
 
         if (StringUtils.isBlank(userId)) {
             return IMoocJSONResult.errorMsg("用户id不能为空...");
         }
-
         /* 两个常量 */
         // 1.文件保存的命名空间
         String fileSpace = "/Users/hptg/Documents/Project/Spring/Tik_Toc/Resources";
@@ -93,8 +93,8 @@ public class UserController extends BasicController {
         return IMoocJSONResult.ok(uploadPathDB);
     }
 
-    @ApiOperation(value="查询用户信息", notes="查询用户信息的接口")
-//    @ApiImplicitParam(name="userId", value="用户id", required=true, dataType="String", paramType="query")
+    @ApiOperation(value = "查询用户信息", notes = "查询用户信息的接口")
+    @ApiImplicitParam(name = "userId", value = "用户id", required = true, dataType = "String", paramType = "query")
     @GetMapping("/query")
     public IMoocJSONResult query(String userId, String fanId) throws Exception {
         if (StringUtils.isBlank(userId)) {
@@ -110,9 +110,11 @@ public class UserController extends BasicController {
     }
 
 
-    @PostMapping("/queryPublisher")
-    public IMoocJSONResult queryPublisher(String loginUserId, String videoId,
-                                          String publishUserId) throws Exception {
+    /**
+     * Description: 当用户点进具体的视频时候要获取的信息的查询接口
+     */
+    @GetMapping("/queryPublisher")
+    public IMoocJSONResult queryPublisher(String loginUserId, String videoId, String publishUserId) throws Exception {
 
         if (StringUtils.isBlank(publishUserId)) {
             return IMoocJSONResult.errorMsg("");
@@ -125,7 +127,6 @@ public class UserController extends BasicController {
 
         // 2. 查询当前登录者和视频的点赞关系
         boolean userLikeVideo = userService.isUserLikeVideo(loginUserId, videoId);
-
         PublisherVideo bean = new PublisherVideo();
         bean.setPublisher(publisher);
         bean.setUserLikeVideo(userLikeVideo);
