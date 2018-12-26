@@ -36,7 +36,7 @@ public class UserController extends BasicController {
     private UserService userService;
 
     @ApiOperation(value = "用户上传头像", notes = "用户上传头像的接口")
-    @ApiImplicitParam(name="userId", value="用户id", required=true, dataType="String", paramType="query")
+    @ApiImplicitParam(name = "userId", value = "用户id", required = true, dataType = "String", paramType = "query")
     @PostMapping("/uploadFace")
     public IMoocJSONResult uploadFace(String userId, @RequestParam("file") MultipartFile[] files) throws Exception {
 
@@ -134,18 +134,23 @@ public class UserController extends BasicController {
         return IMoocJSONResult.ok(bean);
     }
 
+    /**
+     * Description: 成为某用户的粉丝
+     * userId:被成为粉丝的ID，fanId:登录的用户
+     */
     @PostMapping("/beyourfans")
     public IMoocJSONResult beyourfans(String userId, String fanId) throws Exception {
-
         if (StringUtils.isBlank(userId) || StringUtils.isBlank(fanId)) {
             return IMoocJSONResult.errorMsg("");
         }
-
         userService.saveUserFanRelation(userId, fanId);
-
         return IMoocJSONResult.ok("关注成功...");
     }
 
+    /**
+     * Description: 取消成为某用户的粉丝
+     * userId:被成为粉丝的ID，fanId:登录的用户
+     */
     @PostMapping("/dontbeyourfans")
     public IMoocJSONResult dontbeyourfans(String userId, String fanId) throws Exception {
 

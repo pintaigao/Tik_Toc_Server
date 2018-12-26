@@ -5,6 +5,7 @@ import com.hptg.tik_toc.mapper.UsersLikeVideosMapper;
 import com.hptg.tik_toc.mapper.UsersMapper;
 import com.hptg.tik_toc.mapper.UsersReportMapper;
 import com.hptg.tik_toc.pojo.Users;
+import com.hptg.tik_toc.pojo.UsersFans;
 import com.hptg.tik_toc.pojo.UsersLikeVideos;
 import com.hptg.tik_toc.pojo.UsersReport;
 import com.hptg.tik_toc.service.UserService;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 import tk.mybatis.mapper.entity.Example;
@@ -110,21 +112,58 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
+    /**
+     * Description: 关注用户
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void saveUserFanRelation(String userId, String fanId) {
+        String relId = sid.nextShort();
+        UsersFans userFan = new UsersFans();
+        userFan.setId(relId);
+        userFan.setUserId(userId);
+        userFan.setFanId(fanId);
+        usersFansMapper.insert(userFan);
+        usersMapper.addFansCount(userId);
+        usersMapper.addFollersCount(fanId);
     }
 
+    /**
+     * Description: 取消关注用户
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void deleteUserFanRelation(String userId, String fanId) {
+        Example example = new Example(UsersFans.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId", userId);
+        criteria.andEqualTo("fanId", fanId);
+        usersFansMapper.deleteByExample(example);
+        usersMapper.reduceFansCount(userId);
+        usersMapper.reduceFollersCount(fanId);
     }
 
     @Override
     public boolean queryIfFollow(String userId, String fanId) {
+        Example example = new Example(UsersFans.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId", userId);
+        criteria.andEqualTo("fanId", fanId);
+        List<UsersFans> list = usersFansMapper.selectByExample(example);
+        if (list != null && !list.isEmpty() && list.size() > 0) {
+            return true;
+        }
         return false;
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void reportUser(UsersReport userReport) {
 
+        String urId = sid.nextShort();
+        userReport.setId(urId);
+        userReport.setCreateDate(new Date());
+
+        usersReportMapper.insert(userReport);
     }
 }
