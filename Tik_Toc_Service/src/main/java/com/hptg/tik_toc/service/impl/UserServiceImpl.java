@@ -159,11 +159,9 @@ public class UserServiceImpl implements UserService {
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void reportUser(UsersReport userReport) {
-
         String urId = sid.nextShort();
         userReport.setId(urId);
         userReport.setCreateDate(new Date());
-
         usersReportMapper.insert(userReport);
     }
 }

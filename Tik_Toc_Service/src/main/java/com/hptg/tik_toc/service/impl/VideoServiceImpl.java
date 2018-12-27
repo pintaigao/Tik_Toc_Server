@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hptg.tik_toc.mapper.CommentsMapper;
+import com.hptg.tik_toc.mapper.CommentsMapperCustom;
 import com.hptg.tik_toc.mapper.SearchRecordsMapper;
 import com.hptg.tik_toc.mapper.UsersLikeVideosMapper;
 import com.hptg.tik_toc.mapper.UsersMapper;
@@ -50,8 +51,8 @@ public class VideoServiceImpl implements VideoService {
     @Autowired
     private CommentsMapper commentMapper;
 
-//	@Autowired
-//	private CommentsMapperCustom commentMapperCustom;
+	@Autowired
+	private CommentsMapperCustom commentMapperCustom;
 
     @Autowired
     private Sid sid;
@@ -196,23 +197,22 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public PagedResult getAllComments(String videoId, Integer page, Integer pageSize) {
 
-//		PageHelper.startPage(page, pageSize);
-//
-//		List<CommentsVO> list = commentMapperCustom.queryComments(videoId);
-//
-//			for (CommentsVO c : list) {
-//				String timeAgo = TimeAgoUtils.format(c.getCreateTime());
-//				c.setTimeAgoStr(timeAgo);
-//			}
-//
-//		PageInfo<CommentsVO> pageList = new PageInfo<>(list);
-//
+        PageHelper.startPage(page, pageSize);
+
+        List<CommentsVO> list = commentMapperCustom.queryComments(videoId);
+
+        for (CommentsVO c : list) {
+            String timeAgo = TimeAgoUtils.format(c.getCreateTime());
+            c.setTimeAgoStr(timeAgo);
+        }
+
+        PageInfo<CommentsVO> pageList = new PageInfo<>(list);
         PagedResult grid = new PagedResult();
-//		grid.setTotal(pageList.getPages());
-//		grid.setRows(list);
-//		grid.setPage(page);
-//		grid.setRecords(pageList.getTotal());
-//
+        grid.setTotal(pageList.getPages());
+        grid.setRows(list);
+        grid.setPage(page);
+        grid.setRecords(pageList.getTotal());
+
         return grid;
     }
 

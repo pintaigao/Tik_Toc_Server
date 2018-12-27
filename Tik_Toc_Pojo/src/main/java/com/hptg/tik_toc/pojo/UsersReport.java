@@ -38,6 +38,8 @@ public class UsersReport {
     @Column(name = "create_date")
     private Date createDate;
 
+
+
     /**
      * @return id
      */
