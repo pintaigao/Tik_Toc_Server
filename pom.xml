@@ -4,26 +4,46 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.hptg.tik_toc</groupId>
-    <artifactId>Tik_Toc</artifactId>
-    <packaging>pom</packaging>
+    <groupId>com.imooc</groupId>
+    <artifactId>imooc-videos-dev</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>Tik_Toc_Common</module>
-        <module>Tik_Toc_Pojo</module>
-        <module>Tik_Toc_Mapper</module>
-        <module>Tik_Toc_Service</module>
-        <module>Tik_Toc_Api</module>
+        <module>imooc-videos-dev-common</module>
+        <module>imooc-videos-dev-pojo</module>
+        <module>imooc-videos-mapper</module>
+        <module>imooc-video-dev-service</module>
+        <module>imooc-vidoes-dev-api</module>
     </modules>
+    <packaging>pom</packaging>
 
-    <name>Tik_Toc Server</name>
-
+    <name>微信小程序-短视频实战</name>
+    <description>
+        微信小程序实战课程：
+        小程序
+        maven
+        springmvc
+        springboot
+        mybatis
+        mybatis-pagehelper
+        redis
+        ffmpeg
+        druid
+        mariadb/mysql
+        zookeeper音频操作
+    </description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starters</artifactId>
-        <version>1.5.18.RELEASE</version>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.12.RELEASE</version>
+        <relativePath/>
     </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
 
 </project>
