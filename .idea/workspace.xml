@@ -52,6 +52,7 @@
       <find>page</find>
       <find>usersLikeVideosMapper</find>
       <find>saveVideo</find>
+      <find>imooc-video</find>
     </findStrings>
   </component>
   <component name="Git.Settings">

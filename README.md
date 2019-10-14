@@ -6,6 +6,84 @@ To simply said, this is the backend server of the app - TIK_TOC
 
 ### 开发过程
 
+#### 一.项目框架的搭建
+
+<img src="/Users/hptg/Documents/Project/Spring/Tik_Toc/Resources/Pictures/picture1.png" style="zoom:50%;" />
+
+聚合项目：
+
+例子，在 Mapper 的Maven中，注入POJO的dependence
+
+```xml
+<dependencies>
+	<dependency>
+    	<groupId>com.hptg.tik_toc</groupId>
+        <artifactId>Tik_Toc_Pojo</artifactId>
+        <version>1.0-SNAPSHOT</version>
+	</dependency>
+</dependencies>
+```
+
+同样，在POJO的Maven中，注入Common的dependence
+
+```xml
+<dependencies>
+	<dependency>
+    	<groupId>com.hptg.tik_toc</groupId>
+        <artifactId>Tik_Toc_Common</artifactId>
+        <version>1.0-SNAPSHOT</version>
+	</dependency>
+</dependencies>
+```
+
+同时，他们的parent都是最顶层的那个
+
+```xml
+<parent>
+	<artifactId>Tik_Toc</artifactId>
+    <groupId>com.hptg.tik_toc</groupId>
+    <version>1.0-SNAPSHOT</version>
+</parent>
+```
+
+同时，总文件项目project的parent是Spring Boot
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hptg.tik_toc</groupId>
+    <artifactId>Tik_Toc</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    
+    <modules>
+        <module>Tik_Toc_Common</module>
+        <module>Tik_Toc_Pojo</module>
+        <module>Tik_Toc_Mapper</module>
+        <module>Tik_Toc_Service</module>
+        <module>Tik_Toc_Api</module>
+    </modules>
+
+    <name>Tik_Toc Server</name>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starters</artifactId>
+        <version>1.5.18.RELEASE</version>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+</project>
+```
+
+
+
+
+
 #### 一. 用户信息的开发：
 
 * 开发Redis
