@@ -1,84 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09434c8c-f1a0-484f-937a-8a80d4185578" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/META-INF/Tik_Toc_Api.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/Swagger2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/Swagger2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/WebMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/BasicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/BasicController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/BgmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/BgmController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/RegistLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/RegistLoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/VideoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/interceptor/MiniInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Api/target/classes/com/hptg/tik_toc/controller/interceptor/MiniInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/META-INF/Tik_Toc_Common.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/enums/BGMOperatorTypeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/enums/VideoStatusEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/FetchVideoCover.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/FetchVideoCover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/IMoocJSONResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/IMoocJSONResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/JsonUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/MD5Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/MergeVideoMp3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/MergeVideoMp3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/MyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/MyMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/PagedResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/PagedResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/RedisOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/RedisOperator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/TimeAgoUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/com/hptg/tik_toc/utils/TimeAgoUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Code.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Code.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/DayCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/DayCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Id.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/IdWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/IdWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/InvalidSystemClock.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/InvalidSystemClock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/RandomCodeStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/RandomCodeStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Sid$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Sid$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Sid.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Sid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/WorkerIdStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/WorkerIdStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DayPrefixRandomCodeStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DayPrefixRandomCodeStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultRandomCodeStrategy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultRandomCodeStrategy$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultRandomCodeStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultRandomCodeStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/DefaultWorkerIdStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/FileLock.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/strategy/FileLock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/HttpReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/HttpReq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/IPv4Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/IPv4Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Ip.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Ip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Props$Silent.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Props$Silent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Props.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Props.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Serializes.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Serializes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Common/target/classes/org/n3r/idworker/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/BgmMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/CommentsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/CommentsMapperCustom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/SearchRecordsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/UsersFansMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/UsersLikeVideosMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/UsersMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/UsersReportMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/VideosMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Mapper/target/classes/com/hptg/tik_toc/mapper/VideosMapperCustom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Bgm.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Bgm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Comments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/SearchRecords.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/SearchRecords.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/UsersFans.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/UsersFans.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/UsersLikeVideos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/UsersLikeVideos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/UsersReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/UsersReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Videos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/Videos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/CommentsVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/CommentsVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/PublisherVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/PublisherVideo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/UsersVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/UsersVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/VideosVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Pojo/target/classes/com/hptg/tik_toc/pojo/vo/VideosVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/BgmService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/BgmService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/VideoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/impl/BgmServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/impl/BgmServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/impl/VideoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tik_Toc_Service/target/classes/com/hptg/tik_toc/service/impl/VideoServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="09434c8c-f1a0-484f-937a-8a80d4185578" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/Tik_Toc_Common/target/" />
     <ignored path="$PROJECT_DIR$/Tik_Toc_Mapper/target/" />
     <ignored path="$PROJECT_DIR$/Tik_Toc_Pojo/target/" />
@@ -97,71 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/CommentsMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/BasicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/java/com/hptg/tik_toc/controller/BgmController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/UsersLikeVideosMapper.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tik_Toc_Api/src/main/resources/mapper/UsersMapper.xml">
+        <entry file="file://$PROJECT_DIR$/Tik_Toc_Common/src/main/java/com/hptg/tik_toc/utils/JsonUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-generatorConfig/generatorConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="345">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -247,8 +110,18 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Tik_Toc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tik_Toc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,10 +304,10 @@
     <option name="totallyTimeSpent" value="68465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="23" width="2506" height="1057" extended-state="6" />
+    <frame x="1280" y="23" width="1280" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984456" visible="true" weight="0.1424513" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984456" visible="true" weight="0.18659128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -678,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tik_Toc_Common/src/main/java/com/hptg/tik_toc/utils/JsonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        <state relative-caret-position="345">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
         </state>
       </provider>
     </entry>

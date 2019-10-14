@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Tik_Toc_Pojo" />
+        <module name="Tik_Toc_Service" />
         <module name="Tik_Toc_Api" />
         <module name="Tik_Toc_Common" />
         <module name="Tik_Toc_Mapper" />
-        <module name="Tik_Toc_Pojo" />
-        <module name="Tik_Toc_Service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
